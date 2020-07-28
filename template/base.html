@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} </title>
+</head>
+<style>
+    h1{
+        font-family: Arial ;
+        background: aqua;
+        text-align: center;
+        font-size:200%;
+    }
+    li{
+        background: fuchsia;
+        list-style: none;
+        display: inline;
+        padding: 15px;
+    }
+    footer{
+        text-align: right;
+    }
+
+</style>
+<body>
+<h1>Mi Primer Menu</h1>
+    <ul>
+        <li>   <a href="{%url "home" %}">Portada</a>              </li>
+        <li>   <a href="{%url "about-me" %}">Acerca de</a>   </li>
+        <li>   <a href="{%url "contact" %}">Contacto</a>     </li>
+    </ul>
+
+   {% block content %} {% endblock %}
+<footer>
+    Yo amo a Alexander
+</footer>
+</body>
+</html>
